@@ -13,7 +13,7 @@
 Приложите в файл README.md текст использованных команд в GitHub.
 
 ![Авторизация](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img001.png)
-'''shell
+```shell
 # wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian12_all.deb
 # dpkg -i zabbix-release_latest_7.4+debian12_all.deb
 # apt update
@@ -23,7 +23,7 @@
 # sudo -u postgres createdb -O zabbix zabbix# zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 # systemctl restart zabbix-server zabbix-agent apache2
 # systemctl enable zabbix-server zabbix-agent apache2
-'''
+```
 ---
 
 ### Задание 2
@@ -45,7 +45,7 @@
 ![Host](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img002.png)
 ![Log_Agent](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img003.png)
 ![Latest data](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img004.png)
-'''shell
+```shell
 $ sudo -s
 # wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
 # dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
@@ -53,6 +53,6 @@ $ sudo -s
 # apt install zabbix-agent
 # systemctl restart zabbix-agent
 # systemctl enable zabbix-agent
-'''
+```
 ---
 
