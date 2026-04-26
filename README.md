@@ -11,7 +11,7 @@
 Создайте Item который будет собирать информацию об загрузке RAM в процентах
 Требования к результату
  Прикрепите в файл README.md скриншот страницы шаблона с названием «Задание 1»
-![1](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_1.png)
+![1](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_1.1.png)
  
 Задание 2
 Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.
@@ -46,4 +46,4 @@
 Разместите на нём несколько графиков на ваше усмотрение.
 Требования к результату
  Прикрепите в файл README.md скриншот дашборда с названием «Задание 4»
- ![](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_3.png)
+ ![](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_3.1.png)
