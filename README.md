@@ -1,58 +1,49 @@
-Домашнее задания "Система мониторинга Zabbix" Шушко И.В.
+##Домашнее задания "Система мониторинга Zabbix часть 2" Шушко И.В.
 
-### Задание 1
-Установите Zabbix Server с веб-интерфейсом.
 
-Процесс выполнения
-Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
-Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11.
-Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.
-Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
-Требования к результатам
-Прикрепите в файл README.md скриншот авторизации в админке.
-Приложите в файл README.md текст использованных команд в GitHub.
-
-![Авторизация](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img001.png)
-```shell
-# wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian12_all.deb
-# dpkg -i zabbix-release_latest_7.4+debian12_all.deb
-# apt update
-# apt install zabbix-server-pgsql zabbix-frontend-php php8.2-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
-# sudo apt install -y postgresql postgresql-contrib
-# sudo -u postgres createuser --pwprompt zabbix
-# sudo -u postgres createdb -O zabbix zabbix# zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-# systemctl restart zabbix-server zabbix-agent apache2
-# systemctl enable zabbix-server zabbix-agent apache2
-```
----
-
-### Задание 2
-Установите Zabbix Agent на два хоста.
+#Задание 1
+Создайте свой шаблон, в котором будут элементы данных, мониторящие загрузку CPU и RAM хоста.
 
 Процесс выполнения
-Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
-Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
-Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
-Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
-Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
-Требования к результатам
-Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
-Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
-Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
-Приложите в файл README.md текст использованных команд в GitHub
+Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+В веб-интерфейсе Zabbix Servera в разделе Templates создайте новый шаблон
+Создайте Item который будет собирать информацию об загрузке CPU в процентах
+Создайте Item который будет собирать информацию об загрузке RAM в процентах
+Требования к результату
+ Прикрепите в файл README.md скриншот страницы шаблона с названием «Задание 1»
+![1](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_1.png)
+ 
+Задание 2
+Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.
 
+Процесс выполнения
+Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server
+Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов
+Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera
+Прикрепите за каждым хостом шаблон Linux by Zabbix Agent
+Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов
+Требования к результату
+ Результат данного задания сдавайте вместе с заданием 3
+Задание 3
+Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.
 
-![Host](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img002.png)
-![Log_Agent](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img003.png)
-![Latest data](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/img004.png)
-```shell
-$ sudo -s
-# wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
-# dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
-# apt update
-# apt install zabbix-agent
-# systemctl restart zabbix-agent
-# systemctl enable zabbix-agent
-```
----
+Процесс выполнения
+Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+Зайдите в настройки каждого хоста и в разделе Templates прикрепите к этому хосту ваш шаблон
+Так же к каждому хосту привяжите шаблон Linux by Zabbix Agent
+Проверьте что в раздел Latest Data начали поступать необходимые данные из вашего шаблона
+Требования к результату
+ Прикрепите в файл README.md скриншот страницы хостов, где будут видны привязки шаблонов с названиями «Задание 2-3». Хосты должны иметь зелёный статус подключения
+![](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_2.png)
+ 
+Задание 4
+Создайте свой кастомный дашборд.
 
+Процесс выполнения
+Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+В разделе Dashboards создайте новый дашборд
+Разместите на нём несколько графиков на ваше усмотрение.
+Требования к результату
+ Прикрепите в файл README.md скриншот дашборда с названием «Задание 4»
+ ![](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Zab_3.png)
