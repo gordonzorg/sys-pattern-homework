@@ -5,7 +5,7 @@
 Установите и настройте HAProxy, воспользуйтесь материалами к лекции по ссылке
 Настройте балансировку Round-robin на 4 уровне.
 На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy.
-https://github.com/gordonzorg/sys-pattern-homework/blob/main/haproxy/haproxy1.conf
+[config](https://github.com/gordonzorg/sys-pattern-homework/blob/main/haproxy/haproxy1.conf)
 
 ![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/HaProxy1.png)
 
@@ -14,6 +14,6 @@ https://github.com/gordonzorg/sys-pattern-homework/blob/main/haproxy/haproxy1.co
 Настройте балансировку Weighted Round Robin на 7 уровне, чтобы первый сервер имел вес 2, второй - 3, а третий - 4
 HAproxy должен балансировать только тот http-трафик, который адресован домену example.local
 На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy c использованием домена example.local и без него.
-https://github.com/gordonzorg/sys-pattern-homework/blob/main/haproxy/haproxy2.conf
+[config](https://github.com/gordonzorg/sys-pattern-homework/blob/main/haproxy/haproxy2.conf)
 
 ![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/HaProxy2.png)
