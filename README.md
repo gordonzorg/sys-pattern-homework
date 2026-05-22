@@ -5,8 +5,8 @@
 Необходимо исключить из синхронизации все директории, начинающиеся с точки (скрытые)
 Необходимо сделать так, чтобы rsync подсчитывал хэш-суммы для всех файлов, даже если их время модификации и размер идентичны в источнике и приемнике.
 На проверку направить скриншот с командой и результатом ее выполнения
-![img]([https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/HaProxy1.png](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/rsync1.1.png))
-![img]([https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/HaProxy1.png](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/rsync1.2.png))
+![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/rsync1.1.png)
+![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/rsync1.2.png)
 
 
 ##  Задание 2
@@ -17,4 +17,4 @@
 На проверку направить файл crontab и скриншот с результатом работы утилиты
 [config](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/crontab)
 
-![img]([https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/HaProxy1.png](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/rsync2.1.png))
+![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/rsync/rsync2.1.png)
