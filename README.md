@@ -1,28 +1,32 @@
-Домашнее задание по лекции "ELK" Шушко И В
+Домашнее задание к занятию «Кеширование Redis/memcached» Шушко И В
 
-## Задание 1
-Elasticsearch
-Установите и запустите Elasticsearch, после чего поменяйте параметр cluster_name на случайный.
+## Задание 1. Кеширование
+Приведите примеры проблем, которые может решить кеширование.
 
-Приведите скриншот команды 'curl -X GET 'localhost:9200/_cluster/health?pretty', сделанной на сервере с установленным Elasticsearch. Где будет виден нестандартный cluster_name.
-![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/ELK1.png)
+Приведите ответ в свободной форме.
 
-## Задание 2. Kibana
-Установите и запустите Kibana.
+Кеширование помогает решить следующие проблемы:
 
-Приведите скриншот интерфейса Kibana на странице http://<ip вашего сервера>:5601/app/dev_tools#/console, где будет выполнен запрос GET /_cluster/health?pretty.
-![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/ELK2.png)
+Ускорение загрузки данных и страниц.
+Снижение нагрузки на сервер и базу данных.
+Уменьшение количества повторных запросов.
+Экономия сетевого трафика.
+Повышение производительности приложений и сайтов.
 
-## Задание 3. Logstash
-Установите и запустите Logstash и Nginx. С помощью Logstash отправьте access-лог Nginx в Elasticsearch.
+## Задание 2. Memcached
+Установите и запустите memcached.
+![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Mem1.png)
 
-Приведите скриншот интерфейса Kibana, на котором видны логи Nginx.
-![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/ELK3.png)
+Приведите скриншот systemctl status memcached, где будет видно, что memcached запущен.
 
+## Задание 3. Удаление по TTL в Memcached
+Запишите в memcached несколько ключей с любыми именами и значениями, для которых выставлен TTL 5.
 
+Приведите скриншот, на котором видно, что спустя 5 секунд ключи удалились из базы.
+![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Mem2.png)
 
-## Задание 4. Filebeat.
-Установите и запустите Filebeat. Переключите поставку логов Nginx с Logstash на Filebeat.
+## Задание 4. Запись данных в Redis
+Запишите в Redis несколько ключей с любыми именами и значениями.
 
-Приведите скриншот интерфейса Kibana, на котором видны логи Nginx, которые были отправлены через Filebeat.
-![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/ELK4.png)
+Через redis-cli достаньте все записанные ключи и значения из базы, приведите скриншот этой операции.
+![img](https://github.com/gordonzorg/sys-pattern-homework/blob/main/img/Mem3.png)
